@@ -9,13 +9,20 @@ Uma aplicação FastAPI bem simples que permite às pessoas estudantes visualiza
 
 ## Primeiros passos
 
-1. Instale as dependências:
+1. Crie e ative um ambiente virtual:
 
    ```
-   pip install fastapi uvicorn
+   python -m venv .venv
+   source .venv/bin/activate
    ```
 
-2. Execute a aplicação:
+2. Instale as dependências no ambiente ativo:
+
+   ```
+   python -m pip install -r requirements.txt
+   ```
+
+3. Execute a aplicação:
 
    ```
    python app.py
@@ -49,3 +56,11 @@ A aplicação usa um modelo de dados simples, com identificadores significativos
    - Ano escolar
 
 Todos os dados são armazenados em memória, o que significa que serão reiniciados quando o servidor for reiniciado.
+
+## Testes
+
+Com o ambiente virtual ativado, execute a suíte de testes de backend a partir da raiz do repositório:
+
+```bash
+python -m pytest -q
+```
